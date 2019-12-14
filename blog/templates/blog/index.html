@@ -1,0 +1,6 @@
+<ul>
+    {% for post in posts %}
+    <h3>Post {{ post.id }} by {{ post.op }}</h3>
+    <li>{{ post.content }}</li>
+    {% endfor %}
+</ul>
