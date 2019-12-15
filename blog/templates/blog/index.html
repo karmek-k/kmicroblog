@@ -5,7 +5,10 @@
 <ul>
     {% if posts %}
         {% for post in posts %}
-        <h3>Post #{{ post.id }} by {{ post.op }}</h3>
+        <h3>
+            Post #{{ post.id }} by {{ post.op }} {% include 'blog/votes.html' %}
+        </h3>
+
         <li>{{ post.content }}</li>
         {% endfor %}
     {% else %}

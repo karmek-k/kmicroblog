@@ -1,0 +1,11 @@
+(
+{% if post.votes > 0 %}
+    <span style="color: green;">
+{% elif post.votes < 0 %}
+    <span style="color: red;">
+{% else %}
+    <span> 
+{% endif %}
+{{ post.votes }}
+</span>
+)
