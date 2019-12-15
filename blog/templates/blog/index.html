@@ -1,19 +1,19 @@
 {% extends 'shared/base.html' %}
 
 {% block content %}
+<content>
+    <ul>    
+        {% if posts %}
+            {% for post in posts %}
+            <h3>
+                Post #{{ post.id }} by {{ post.op }} {% include 'blog/votes.html' %}
+            </h3>
 
-<ul>
-    {% if posts %}
-        {% for post in posts %}
-        <h3>
-            Post #{{ post.id }} by {{ post.op }} {% include 'blog/votes.html' %}
-        </h3>
-
-        <li>{{ post.content }}</li>
-        {% endfor %}
-    {% else %}
-        <i>No posts found</i>
-    {% endif %}
-</ul>
-
+            <li>{{ post.content }}</li>
+            {% endfor %}
+        {% else %}
+            <i>No posts found</i>
+        {% endif %}
+    </ul>
+</content>
 {% endblock content %}
