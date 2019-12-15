@@ -1,5 +1,20 @@
 {% extends 'shared/base.html' %}
 
 {% block content %}
-awaa
+
+<form method="POST" action="{% url 'authentication:login' %}">
+    {% csrf_token %}
+    
+    {{ form.username.label_tag }}
+    {{ form.username }}
+    <br />
+
+    {{ form.password.label_tag }}
+    {{ form.password }}
+    <br />
+
+    <input type="hidden" name="next" value="{{ next }}" />
+    <input type="submit" value="Log in" />
+</form>
+
 {% endblock content %}
