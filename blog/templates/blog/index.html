@@ -3,10 +3,14 @@
 {% block content %}
 
 <ul>
-    {% for post in posts %}
-    <h3>Post {{ post.id }} by {{ post.op }}</h3>
-    <li>{{ post.content }}</li>
-    {% endfor %}
+    {% if posts %}
+        {% for post in posts %}
+        <h3>Post #{{ post.id }} by {{ post.op }}</h3>
+        <li>{{ post.content }}</li>
+        {% endfor %}
+    {% else %}
+        <i>No posts found</i>
+    {% endif %}
 </ul>
 
 {% endblock content %}
