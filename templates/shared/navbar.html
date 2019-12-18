@@ -4,9 +4,13 @@
 <nav>
     <ul>
         <li><a href="{% url 'blog:index' %}">Home</a></li>
-        <li><a href="{% url 'authentication:login' %}">Log in</a></li>
         <li><a href="{% url 'blog:add_post' %}">Write a post</a></li>
+        
+        {% if user.is_authenticated %}
         <li><a href="{% url 'authentication:logout' %}">Log out</a></li>
+        {% else %}
+        <li><a href="{% url 'authentication:login' %}">Log in</a></li>
+        {% endif %}
     </ul>
     <hr />
 </nav>
