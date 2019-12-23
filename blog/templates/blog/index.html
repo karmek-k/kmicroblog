@@ -2,9 +2,6 @@
 
 {% block content %}
 <content>
-    {% if user.is_authenticated %}
-    <p>Currently logged in as <b>{{ user.username }}</b>.</p>
-    {% endif %}
     <ul>    
         {% if posts %}
             {% for post in posts %}

@@ -12,5 +12,8 @@
         <li><a href="{% url 'authentication:login' %}">Log in</a></li>
         {% endif %}
     </ul>
+    {% if user.is_authenticated %}
+    <p>Currently logged in as <b>{{ user.username }}</b>.</p>
+    {% endif %}
     <hr />
 </nav>
