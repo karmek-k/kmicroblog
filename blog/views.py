@@ -16,6 +16,8 @@ def add_post(request):
     if request.method == 'POST':
         form = PostForm(request.POST or None)
         if form.is_valid():
+            instance = form.save(commit=False)
+            instance.op = request.user
             form.save()
         return redirect('blog:index')
     
