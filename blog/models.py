@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     content = models.TextField()
     votes = models.IntegerField(default=0)
-    op = models.ForeignKey(User, on_delete=models.CASCADE)
+    op = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='OP')
     created_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
