@@ -3,6 +3,7 @@ Microblogging application
 
 ## To-do list
 - [x] MySQL / MariaDB support
+- [ ] Upvotes, downvotes
 - [ ] Post tags
 - [ ] Post images
 - [ ] Comments
