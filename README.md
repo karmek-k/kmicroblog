@@ -3,6 +3,12 @@ Microblogging application
 
 ## To-do list
 - [x] MySQL / MariaDB support
+- [ ] Authentication
+    * [x] Log in / out
+    * [ ] Account creation
+    * [ ] Account deletion
+    * [ ] Password change
+    * [ ] Password reset
 - [ ] Upvotes, downvotes
 - [ ] Post tags
 - [ ] Post images
