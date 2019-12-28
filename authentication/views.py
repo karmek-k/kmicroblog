@@ -6,6 +6,8 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
+        else:
+            return redirect('authentication:signup')
         return redirect('blog:index')
 
     return render(request, 'registration/signup.html', {'form': UserCreationForm()})
