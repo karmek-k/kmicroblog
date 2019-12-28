@@ -20,5 +20,6 @@
     <input type="hidden" name="next" value="{{ next }}" />
     <input type="submit" value="Log in" />
 </form>
+<p>Don't have an account? <a href="{% url 'authentication:signup' %}">Sign up now!</a></p>
 
 {% endblock content %}

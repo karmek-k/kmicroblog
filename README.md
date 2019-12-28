@@ -5,7 +5,7 @@ Microblogging application
 - [x] MySQL / MariaDB support
 - [ ] Authentication
     * [x] Log in / out
-    * [ ] Account creation
+    * [x] Account creation
     * [ ] Account deletion
     * [ ] Password change
     * [ ] Password reset
@@ -15,6 +15,7 @@ Microblogging application
 - [ ] Comments
     * [ ] with images
 - [ ] Some decent CSS
+- [ ] Change the way that the posts are added (Celery?)
 - [ ] Mod / admin tools
     * [ ] Post deletion feature, mods' PSAs, etc.
     * [ ] User / IP bans
