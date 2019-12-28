@@ -81,7 +81,8 @@ WSGI_APPLICATION = 'kmicroblog.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': {},
+    'mysql': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.getenv('MYSQL_DB_NAME'),
         'USER': os.getenv('MYSQL_USERNAME'),
@@ -95,6 +96,7 @@ DATABASES = {
     },
 }
 
+DATABASES['default'] = DATABASES[os.getenv('DATABASE', 'sqlite')]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
