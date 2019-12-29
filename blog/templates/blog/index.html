@@ -2,18 +2,19 @@
 
 {% block content %}
 <content>
-    <ul>    
-        {% if posts %}
-            {% for post in posts %}
+    <ul>
+        {% for post, tags in posts_tags %}
             <h3>
                 Post #{{ post.id }} by {{ post.op }} {% include 'blog/votes.html' %}
             </h3>
 
             <li>{{ post.content }}</li>
+            {% for tag in tags %}
+                <small>#<a href="{% url 'blog:tag' tag %}">{{ tag }}</a></small>
             {% endfor %}
-        {% else %}
+        {% empty %}
             <i>No posts found</i>
-        {% endif %}
+        {% endfor %}
     </ul>
 </content>
 {% endblock content %}
