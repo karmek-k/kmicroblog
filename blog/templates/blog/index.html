@@ -2,18 +2,17 @@
 
 {% block content %}
 <content>
-    <ul>    
-        {% if posts %}
-            {% for post in posts %}
+    <ul>
+        {% for post, tags in posts_tags %}
             <h3>
                 Post #{{ post.id }} by {{ post.op }} {% include 'blog/votes.html' %}
             </h3>
 
             <li>{{ post.content }}</li>
-            {% endfor %}
-        {% else %}
+            {{ tags }}
+        {% empty %}
             <i>No posts found</i>
-        {% endif %}
+        {% endfor %}
     </ul>
 </content>
 {% endblock content %}
