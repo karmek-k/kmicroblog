@@ -26,3 +26,7 @@ def add_post(request):
         return redirect('blog:index')
     
     return render(request, 'blog/add_post.html', {'form': PostForm})
+
+
+def tag(request, tag_name):
+    pass

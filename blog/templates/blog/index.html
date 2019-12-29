@@ -10,7 +10,7 @@
 
             <li>{{ post.content }}</li>
             {% for tag in tags %}
-                <small>#{{ tag }}</small>
+                <small>#<a href="{% url 'blog:tag' tag %}">{{ tag }}</a></small>
             {% endfor %}
         {% empty %}
             <i>No posts found</i>
