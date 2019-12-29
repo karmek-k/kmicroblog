@@ -9,7 +9,9 @@
             </h3>
 
             <li>{{ post.content }}</li>
-            {{ tags }}
+            {% for tag in tags %}
+                <small>#{{ tag }}</small>
+            {% endfor %}
         {% empty %}
             <i>No posts found</i>
         {% endfor %}
