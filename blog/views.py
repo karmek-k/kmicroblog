@@ -11,7 +11,7 @@ class TaggedPostsAbstractListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         posts_tags = {}
-        for post in self.get_queryset().order_by('-id'):
+        for post in self.get_queryset():
             posts_tags.setdefault(post, tuple(post.tags.all()))
 
         context = super().get_context_data(**kwargs)

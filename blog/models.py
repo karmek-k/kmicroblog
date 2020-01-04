@@ -10,6 +10,10 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
+    class Meta:
+        ordering = ['-id']
+
+
     content = models.TextField()
     votes = models.IntegerField(default=0)
     op = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='OP')
