@@ -13,7 +13,10 @@ class Post(models.Model):
     class Meta:
         ordering = ['-id']
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a8766fe72aebf16fc1ebc174e475f25ae05698d6
     content = models.TextField()
     votes = models.IntegerField(default=0)
     op = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='OP')

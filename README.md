@@ -10,7 +10,7 @@ Microblogging application
     * [ ] Password change
     * [ ] Password reset
 - [ ] Upvotes, downvotes
-- [ ] Post tags
+- [x] Post tags
 - [ ] Post images
 - [ ] Comments
     * [ ] with images

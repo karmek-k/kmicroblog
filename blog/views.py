@@ -32,11 +32,28 @@ class TagListView(TaggedPostsAbstractListView):
 @login_required
 def add_post(request):
     if request.method == 'POST':
-        form = PostForm(request.POST or None)
+        form = PostForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
             instance.op = request.user
-            form.save()
+            instance.save()
+
+            # tokenize the tags string and make them lowercase
+            tags_list = map(
+                lambda s: s.lower().strip(),
+                form.cleaned_data['tags'].split()
+            )
+
+            # add tags to the new post
+            for tag in tags_list:
+                tag_queryset = Tag.objects.filter(name=tag)
+                if not tag_queryset.exists():
+                    t = Tag.objects.create(name=tag)
+                else:
+                    t = tag_queryset[0]
+                instance.tags.add(t)
+
+            form.save_m2m()
         return redirect('blog:index')
-    
+
     return render(request, 'blog/add_post.html', {'form': PostForm})
