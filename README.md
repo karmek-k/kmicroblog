@@ -1,5 +1,48 @@
-# kmicroblog
+# KMicroblog
 Microblogging application
+
+## Installation & usage
+Create and switch to a virtual environment (not required, but highly recommended):
+```
+python -m venv venv
+
+
+On Linux/OSX:
+
+source venv/bin/activate
+
+On Windows:
+
+.\venv\Scripts\activate
+```
+
+Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+Create a .env file: (*Make sure that you will modify it with your settings.*)
+```
+cp .env.template .env
+```
+
+Migrate database changes:
+```
+python manage.py migrate
+```
+
+Create a superuser (optional):
+```
+python manage.py createsuperuser
+```
+
+And finally, run the development server:
+```
+python manage.py runserver
+```
+
+## Deployment
+*TBA*
 
 ## To-do list
 - [x] MySQL / MariaDB support
