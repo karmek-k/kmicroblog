@@ -37,7 +37,11 @@ def add_post(request):
             instance = form.save(commit=False)
             instance.op = request.user
 
-            tags_list = form.cleaned_data['tags'].split()
+            # tokenize the tags string and make them lowercase
+            tags_list = map(
+                lambda s: s.lower(),
+                form.cleaned_data['tags'].split()
+            )
             for tag in tags_list:
                 tag_queryset = Tag.objects.filter(name=tag)
                 if not tag_queryset.exists():
