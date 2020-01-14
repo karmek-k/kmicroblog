@@ -29,3 +29,7 @@ Microblogging application
 - [ ] LaTeX
 - [ ] Bots
 - [ ] Mobile app (Flutter)
+
+### 2020 to-dos
+- [ ] Flash messages
+- [ ] PostgreSQL support
