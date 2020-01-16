@@ -62,7 +62,7 @@ python manage.py runserver
 - [ ] Mod / admin tools
     * [ ] Post deletion feature, mods' PSAs, etc.
     * [ ] User / IP bans
-- [ ] Captcha
+- [x] Captcha
 - [ ] REST API
 - [ ] Search by post content / tags (ElasticSearch)
 
