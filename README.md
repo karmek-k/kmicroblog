@@ -45,7 +45,7 @@ python manage.py runserver
 *TBA*
 
 ## To-do list
-- [x] -MySQL / MariaDB support- Now deprecated.
+- [x] ~~MySQL / MariaDB support~~ Now deprecated. Use PostgreSQL or SQLite instead.
 - [ ] Authentication
     * [x] Log in / out
     * [x] Account creation
