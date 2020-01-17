@@ -45,7 +45,7 @@ python manage.py runserver
 *TBA*
 
 ## To-do list
-- [x] MySQL / MariaDB support
+- [x] -MySQL / MariaDB support- Now deprecated.
 - [ ] Authentication
     * [x] Log in / out
     * [x] Account creation
@@ -75,4 +75,4 @@ python manage.py runserver
 
 ### 2020 to-dos
 - [ ] Flash messages
-- [ ] PostgreSQL support
+- [x] PostgreSQL support
