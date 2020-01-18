@@ -14,6 +14,8 @@ import os
 
 from dotenv import load_dotenv
 
+from django.urls import reverse_lazy
+
 
 load_dotenv()
 
@@ -140,5 +142,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # ----------------- #
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = reverse_lazy('blog:index')
+LOGOUT_REDIRECT_URL = reverse_lazy('blog:index')
