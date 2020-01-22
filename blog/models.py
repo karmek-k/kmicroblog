@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 
 class Tag(models.Model):
@@ -15,7 +15,11 @@ class Post(models.Model):
 
     content = models.TextField()
     votes = models.IntegerField(default=0)
-    op = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='OP')
+    op = models.ForeignKey(
+        get_user_model(),
+        on_delete=models.CASCADE,
+        verbose_name='OP'
+    )
     created_at = models.DateTimeField(auto_now=True)
     tags = models.ManyToManyField(Tag, related_name='tags', blank=True)
 
