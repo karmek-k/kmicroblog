@@ -76,5 +76,5 @@ python manage.py runserver
 ### 2020 to-dos
 - [ ] Flash messages
 - [x] PostgreSQL support
-- [ ] Add flake8 config file
+- [x] Add flake8 config file
 - [ ] Use Docker for deployment
