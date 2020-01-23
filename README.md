@@ -78,3 +78,4 @@ python manage.py runserver
 - [x] PostgreSQL support
 - [x] Add flake8 config file
 - [ ] Use Docker for deployment
+- [ ] Override the default User model
