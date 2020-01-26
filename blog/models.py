@@ -24,5 +24,5 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, related_name='tags', blank=True)
 
     def __str__(self):
-        tags_list = [str(tag) for tag in self.tags.all()]
+        tags_list = [str(tag['name']) for tag in self.tags.values('name')]
         return '{0} {1}'.format(self.content[:50], tags_list)
