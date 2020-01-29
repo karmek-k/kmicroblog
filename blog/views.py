@@ -54,6 +54,6 @@ def add_post(request):
                 instance.tags.add(t)
 
             form.save_m2m()
-        return redirect('blog:index')
+            return redirect('blog:index')
 
     return render(request, 'blog/add_post.html', {'form': PostForm})
