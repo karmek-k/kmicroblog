@@ -144,3 +144,6 @@ STATIC_URL = '/static/'
 # ----------------- #
 LOGIN_REDIRECT_URL = reverse_lazy('blog:index')
 LOGOUT_REDIRECT_URL = reverse_lazy('blog:index')
+
+
+AUTH_USER_MODEL = 'authentication.User'
